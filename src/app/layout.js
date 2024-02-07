@@ -1,9 +1,14 @@
-import { Inter } from 'next/font/google';
+import { Inter, Roboto } from 'next/font/google';
 import './globals.css';
-import Nav from '../../components/nav';
+import Globalnav from '../../components/globalnav';
 import 'normalize.css/normalize.css';
 
 const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto({
+  weight: ['100', '300', '400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+});
 
 export const metadata = {
   title: 'Apple clone',
@@ -19,8 +24,8 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/icon.ico" sizes="any" />
       </head>
-      <body className={inter.className}>
-        <Nav />
+      <body className={roboto.className}>
+        <Globalnav />
         {children}
       </body>
     </html>
