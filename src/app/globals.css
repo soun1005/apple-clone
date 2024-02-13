@@ -1,29 +1,3 @@
-p,
-span {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  background-color: var(--background-color);
-  box-sizing: border-box;
-  width: 100%;
-}
-
-body {
-  position: relative;
-  min-width: 320px;
-  font-size: 17px;
-  line-height: 1.4705882353;
-  font-weight: 400;
-  letter-spacing: -0.022em;
-  font-family: 'Roboto', sans-serif;
-  /* font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-    sans-serif; */
-  background-color: var(rgb(255, 255, 255));
-  color: var(rgb(29, 29, 31));
-  font-style: normal;
-}
 /************************ root ***********************/
 :root {
   /* color */
@@ -46,8 +20,58 @@ body {
 }
 
 /************************ common values ***********************/
-section {
+
+html {
+  background-color: var(--background-color);
+  box-sizing: border-box;
   width: 100%;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  font-size: 17px;
+  line-height: 1.4705882353;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+  sans-serif; */
+  background-color: var(rgb(255, 255, 255));
+  color: var(rgb(29, 29, 31));
+  font-style: normal;
+}
+
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  font-size: 17px;
+  line-height: 1.4705882353;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+  sans-serif; */
+  background-color: var(rgb(255, 255, 255));
+  color: var(rgb(29, 29, 31));
+  font-style: normal;
+}
+
+p,
+span {
+  margin: 0;
+  padding: 0;
 }
 
 ul,
@@ -64,18 +88,6 @@ a {
 
 button {
   border: none;
-}
-
-/************************ dark mode ***********************/
-#dark main,
-#dark article,
-#dark body,
-#dark .footer {
-  /* color */
-  --bgcolor-main: #020a13;
-  --bgcolor-sub: #1b1f24;
-  --color-text: #ececec;
-  --nav-mobile: rgba(27, 31, 36, 0.9);
 }
 
 /************************ responsive ***********************/
