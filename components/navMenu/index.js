@@ -5,7 +5,8 @@ import styles from './NavMenu.module.css';
 // import SubNav from '../subNav';
 
 const NavMenu = ({ data }) => {
-  const [openDropdown, setOpenDropdown] = useState(true);
+  // managing the sub menu to open and close
+  const [openDropdown, setOpenDropdown] = useState(false);
 
   // const [dropdownContent, setDropdownContent] = useState(true);
 
@@ -20,18 +21,18 @@ const NavMenu = ({ data }) => {
               href="/"
               className={styles.navMenu}
               onMouseEnter={() => setOpenDropdown(true)}
-              onMouseLeave={() => setOpenDropdown(true)}
+              onMouseLeave={() => setOpenDropdown(false)}
             >
               <span>{title}</span>
             </a>
           </li>
           <li>
-            {openDropdown && (
-              <div className={styles.submenu}>
-                {/* <SubNav submenu={menu} /> */}
-                <span>submenu</span>
-              </div>
-            )}
+            <div
+              className={` ${openDropdown ? styles.submenu : styles.hidden}`}
+            >
+              {/* <SubNav submenu={menu} /> */}
+              <span>submenu</span>
+            </div>
           </li>
         </ul>
       </div>

@@ -42,5 +42,29 @@
   width: 100%;
   left: 0;
   right: 0;
+  /* visibility: visible; */
   bottom: 0;
+  transition: 1s;
+  overflow-y: auto;
+  animation: growDown 600ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+.hidden {
+  /* top: -100%; */
+  /* visibility: hidden; */
+  transition: 1s;
+  display: none;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
