@@ -1,5 +1,41 @@
 .container {
   background-color: pink;
-  /* height: 552px; */
   max-width: 1024px;
+  margin: 0 auto;
+}
+
+.content {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1024px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* ul */
+.list {
+  height: 44px;
+  cursor: default;
+  width: auto;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+  list-style: none;
+  font-size: 12px;
+  align-items: center;
+}
+
+/* li */
+.listMenu {
+  display: block;
+}
+
+.mobileLogo {
+  display: none;
+}
+
+.menu {
+  display: contents;
 }
