@@ -1,10 +1,19 @@
+'use client';
+
+import { useState } from 'react';
 import styles from './globalnav.module.css';
+
 import NavMenu from '../navMenu';
 import data from '../../src/navMenu.json';
 
 const Globalnav = () => {
+  const [openDropdown, setOpenDropdown] = useState(false);
+
   return (
-    <nav className={styles.container}>
+    <nav
+      className={styles.container}
+      onMouseLeave={() => setOpenDropdown(false)}
+    >
       <div className={styles.content}>
         {/* go back icon */}
         <div className={styles.goBack}></div>
@@ -38,9 +47,17 @@ const Globalnav = () => {
           </li>
 
           {/* menus */}
-          <li className={`${styles.menu}`}>
+          <li
+            className={`${styles.menu}`}
+            // onMouseEnter={() => setOpenDropdown(true)}
+            // onMouseLeave={() => setOpenDropdown(false)}
+          >
             {/* here goes list component */}
-            <NavMenu data={data} />
+            <NavMenu
+              data={data}
+              setOpenDropdown={setOpenDropdown}
+              openDropdown={openDropdown}
+            />
           </li>
 
           {/* search */}

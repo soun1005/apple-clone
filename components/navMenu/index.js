@@ -1,27 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import styles from './NavMenu.module.css';
 // import SubNav from '../subNav';
 
-const NavMenu = ({ data }) => {
+const NavMenu = ({ data, setOpenDropdown, openDropdown }) => {
   // managing the sub menu to open and close
-  const [openDropdown, setOpenDropdown] = useState(false);
-
+  // const [openDropdown, setOpenDropdown] = useState(false);
   // const [dropdownContent, setDropdownContent] = useState(true);
 
   const list = data.map((list) => {
     const { id, title, menu } = list;
 
     return (
-      <div key={id} className={styles.linkWrap}>
+      <div
+        key={id}
+        className={styles.linkWrap}
+        // onMouseLeave={() => setOpenDropdown(false)}
+      >
         <ul className={styles.ul}>
           <li className={styles.li}>
             <a
               href="/"
               className={styles.navMenu}
               onMouseEnter={() => setOpenDropdown(true)}
-              onMouseLeave={() => setOpenDropdown(false)}
+              // onMouseLeave={() => setOpenDropdown(false)}
             >
               <span>{title}</span>
             </a>

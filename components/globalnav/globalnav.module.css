@@ -1,6 +1,6 @@
 .container {
   background-color: pink;
-  max-width: 1024px;
+  /* max-width: 1024px; */
   margin: 0 auto;
 }
 
@@ -25,11 +25,13 @@
   list-style: none;
   font-size: 12px;
   align-items: center;
+  box-sizing: border-box;
 }
 
 /* li */
 .listMenu {
   display: block;
+  box-sizing: border-box;
 }
 
 .mobileLogo {
@@ -38,4 +40,5 @@
 
 .menu {
   display: contents;
+  background-color: forestgreen;
 }
