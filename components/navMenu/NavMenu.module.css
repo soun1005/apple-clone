@@ -52,7 +52,7 @@
 }
 
 .hidden {
-  transition: 1s;
+  transition: 600ms;
   /* visibility: none; */
   /* display: none; */
   width: 100%;

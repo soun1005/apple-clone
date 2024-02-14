@@ -1,47 +1,70 @@
 'use client';
 
-// import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './NavMenu.module.css';
-// import SubNav from '../subNav';
+import _ from 'lodash';
 
 const NavMenu = ({ data, setOpenDropdown, openDropdown }) => {
-  // managing the sub menu to open and close
-  // const [openDropdown, setOpenDropdown] = useState(false);
-  // const [dropdownContent, setDropdownContent] = useState(true);
+  // managing the sub menu contents
+  const [dropdownContent, setDropdownContent] = useState('');
+  const [submenu, setSubmenu] = useState([]);
+
+  // find correct menu obj by the hovered nav menu title!
+  // -> not to display every single submenus
+  const dropdownObj = _.find(data, { title: dropdownContent }) ?? [];
+
+  // extract only 'Menu' of the correspond obj
+  const menu = _.get(dropdownObj, 'menu') ?? [];
+
+  const handleMouseEnter = (menu) => {
+    setOpenDropdown(true);
+    // save hovered menu's submenus in the state
+    setSubmenu(menu);
+  };
 
   const list = data.map((list) => {
-    const { id, title, menu } = list;
+    const { id, title } = list;
 
     return (
-      <div
-        key={id}
-        className={styles.linkWrap}
-        // onMouseLeave={() => setOpenDropdown(false)}
-      >
+      <div key={id} className={styles.linkWrap}>
         <ul className={styles.ul}>
           <li className={styles.li}>
             <a
               href="/"
               className={styles.navMenu}
-              onMouseEnter={() => setOpenDropdown(true)}
-              // onMouseLeave={() => setOpenDropdown(false)}
+              //
+              onMouseEnter={() => handleMouseEnter(menu)}
             >
-              <span>{title}</span>
+              <span onMouseEnter={() => setDropdownContent(title)}>
+                {title}
+              </span>
             </a>
-          </li>
-          <li>
-            <div
-              className={` ${openDropdown ? styles.submenu : styles.hidden}`}
-            >
-              {/* <SubNav submenu={menu} /> */}
-              <span>submenu</span>
-            </div>
           </li>
         </ul>
       </div>
     );
   });
-  return <div className={styles.container}>{list}</div>;
+  return (
+    <div className={styles.container}>
+      {list}
+      <div
+        className={`${styles.submenuWrap} ${
+          openDropdown ? styles.submenu : styles.hidden
+        }`}
+      >
+        {submenu.map((el, index) => (
+          <div key={index} className={styles.submenuItem}>
+            <p>{Object.keys(el)}</p>
+            <ul>
+              {Object.values(el)[0].map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default NavMenu;
