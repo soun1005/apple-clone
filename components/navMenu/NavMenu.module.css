@@ -9,14 +9,12 @@
   display: inherit;
   background-color: deepskyblue;
   height: 100%;
-  /* width: 100%; */
 }
 
 .ul {
   background-color: rgb(139, 244, 232);
   display: block;
   height: 100%;
-  /* width: 100%; */
 }
 
 .li {
@@ -36,33 +34,51 @@
   padding: 0 15px;
 }
 
+/* submenu displayed */
 .submenu {
-  background-color: red;
+  background-color: rgb(204, 204, 204);
   position: absolute;
-  height: 50vh;
+  height: 100%;
   top: 100%;
+  padding-bottom: 2rem;
   width: 100%;
   left: 0;
   right: 0;
   bottom: 0;
-  /* transition: 1s; */
-  animation: growDown 600ms ease-in-out forwards;
-  transform-origin: top;
-  overflow-y: hidden;
+  animation: growDown 300ms ease-in-out forwards;
+  transform-origin: top center;
+  /* overflow-y: hidden; */
+  opacity: 1;
 }
 
+/* menu items displayed */
+.submenuItems {
+  background-color: pink;
+  /* position: absolute; */
+  width: 100%;
+  overflow-y: hidden;
+  opacity: 1;
+  transition: 300ms;
+  /* height: fit-content; */
+}
+/* submenu hidden */
 .hidden {
-  transition: 600ms;
-  /* visibility: none; */
-  /* display: none; */
+  transition: 500ms;
   width: 100%;
   height: 0;
   top: 100%;
-  width: 100%;
   left: 0;
   right: 0;
   bottom: 0;
+  opacity: 0;
   position: absolute;
+}
+
+/* menu items hidden */
+.submenuItemsHidden {
+  transition: 200ms;
+  width: 100%;
+  opacity: 0;
 }
 
 @keyframes growDown {

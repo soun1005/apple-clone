@@ -4,7 +4,13 @@ import { useEffect, useState } from 'react';
 import styles from './NavMenu.module.css';
 import _ from 'lodash';
 
-const NavMenu = ({ data, setOpenDropdown, openDropdown }) => {
+const NavMenu = ({
+  data,
+  setOpenDropdown,
+  openDropdown,
+  submenuDisplay,
+  setSubmenuDisplay,
+}) => {
   // managing the sub menu contents
   const [dropdownContent, setDropdownContent] = useState('');
   const [submenu, setSubmenu] = useState([]);
@@ -20,7 +26,10 @@ const NavMenu = ({ data, setOpenDropdown, openDropdown }) => {
     setOpenDropdown(true);
     // save hovered menu's submenus in the state
     setSubmenu(menu);
+    setSubmenuDisplay(true);
   };
+
+  console.log(submenuDisplay);
 
   const list = data.map((list) => {
     const { id, title } = list;
@@ -32,7 +41,7 @@ const NavMenu = ({ data, setOpenDropdown, openDropdown }) => {
             <a
               href="/"
               className={styles.navMenu}
-              //
+              // onMouseLeave logic in 'NavMenu' component
               onMouseEnter={() => handleMouseEnter(menu)}
             >
               <span onMouseEnter={() => setDropdownContent(title)}>
@@ -47,17 +56,25 @@ const NavMenu = ({ data, setOpenDropdown, openDropdown }) => {
   return (
     <div className={styles.container}>
       {list}
+      {/* submenu */}
       <div
         className={`${styles.submenuWrap} ${
           openDropdown ? styles.submenu : styles.hidden
         }`}
       >
         {submenu.map((el, index) => (
-          <div key={index} className={styles.submenuItem}>
-            <p>{Object.keys(el)}</p>
-            <ul>
+          <div
+            key={index}
+            className={`${
+              submenuDisplay ? styles.submenuItems : styles.submenuItemsHidden
+            }`}
+          >
+            <p className={styles.submenuTitle}>{Object.keys(el)}</p>
+            <ul className={styles.submenuItemWrap}>
               {Object.values(el)[0].map((item, idx) => (
-                <li key={idx}>{item}</li>
+                <li className={styles.submenuItem} key={idx}>
+                  {item}
+                </li>
               ))}
             </ul>
           </div>

@@ -8,11 +8,18 @@ import data from '../../src/navMenu.json';
 
 const Globalnav = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
+  const [submenuDisplay, setSubmenuDisplay] = useState(false);
+
+  const handleOnMouseLeave = () => {
+    setOpenDropdown(false);
+    setSubmenuDisplay(false);
+  };
 
   return (
     <nav
       className={styles.container}
-      onMouseLeave={() => setOpenDropdown(false)}
+      // onMouseLeave={() => setOpenDropdown(false)}
+      onMouseLeave={handleOnMouseLeave}
     >
       <div className={styles.content}>
         {/* go back icon */}
@@ -47,16 +54,14 @@ const Globalnav = () => {
           </li>
 
           {/* menus */}
-          <li
-            className={`${styles.menu}`}
-            // onMouseEnter={() => setOpenDropdown(true)}
-            // onMouseLeave={() => setOpenDropdown(false)}
-          >
+          <li className={`${styles.menu}`}>
             {/* here goes list component */}
             <NavMenu
               data={data}
               setOpenDropdown={setOpenDropdown}
               openDropdown={openDropdown}
+              submenuDisplay={submenuDisplay}
+              setSubmenuDisplay={setSubmenuDisplay}
             />
           </li>
 
