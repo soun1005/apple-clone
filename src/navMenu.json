@@ -14,10 +14,6 @@
           "Accessories"
         ]
       },
-
-      {
-        "specialMenu": []
-      },
       {
         "Quick Links": [
           "Find a store",
@@ -35,7 +31,8 @@
           "Government"
         ]
       }
-    ]
+    ],
+    "specialMenu": false
   },
   {
     "id": 2,
@@ -49,12 +46,12 @@
           "Mac 14",
           "Mac 13",
           "Mac SE",
-          "Switch from Android"
+          "Switch from Android",
+          "Compare Mac",
+          "Mac Does That"
         ]
       },
-      {
-        "specialMenu": ["Compare Mac", "Mac Does That"]
-      },
+
       {
         "Shop Mac": [
           "Shop Mac",
@@ -76,7 +73,8 @@
           "Siri"
         ]
       }
-    ]
+    ],
+    "specialMenu": true
   },
   {
     "id": 3,
@@ -89,12 +87,12 @@
           "iPad 15",
           "iPad 14",
           "iPad 13",
-          "iPad SE"
+          "iPad SE",
+          "Compare iPad",
+          "Why iPad"
         ]
       },
-      {
-        "specialMenu": ["Compare iPad", "Why iPad"]
-      },
+
       {
         "Shop iPad": [
           "Shop iPad",
@@ -116,7 +114,8 @@
           "Siri"
         ]
       }
-    ]
+    ],
+    "specialMenu": true
   },
   {
     "id": 4,
@@ -129,12 +128,12 @@
           "iPhone 15",
           "iPhone 14",
           "iPhone 13",
-          "iPhone SE"
+          "iPhone SE",
+          "Compare iPhone",
+          "Switch from Android"
         ]
       },
-      {
-        "specialMenu": ["Compare iPhone", "Switch from Android"]
-      },
+
       {
         "Shop iPhone": [
           "Shop iPhone",
@@ -156,7 +155,8 @@
           "Siri"
         ]
       }
-    ]
+    ],
+    "specialMenu": true
   },
   {
     "id": 5,
@@ -169,12 +169,12 @@
           "Watch 15",
           "Watch 14",
           "Watch 13",
-          "Watch SE"
+          "Watch SE",
+          "Compare iPhone",
+          "Why Apple Watch"
         ]
       },
-      {
-        "specialMenu": ["Compare iPhone", "Why Apple Watch"]
-      },
+
       {
         "Shop Watch": [
           "Shop Watch",
@@ -196,25 +196,25 @@
           "Siri"
         ]
       }
-    ]
+    ],
+    "specialMenu": true
   },
   {
     "id": 6,
     "title": "Vision",
     "menu": [
       {
-        "Explore Vision": ["Apple Vision Pro"]
+        "Explore Vision": ["Apple Vision Pro", "Guided Tour", "Tech Specs"]
       },
-      {
-        "specialMenu": ["Guided Tour", "Tech Specs"]
-      },
+
       {
         "Shop Vision": ["Shop Vision", "Vision Accessories", "Book a Demo"]
       },
       {
         "More From Vision": ["Vision Pro Support", "AppleCare+ for Vision"]
       }
-    ]
+    ],
+    "specialMenu": true
   },
   {
     "id": 7,
@@ -226,12 +226,11 @@
           "AirPods 15 Pro",
           "AirPods 15",
           "AirPods 14",
-          "AirPods 13"
+          "AirPods 13",
+          "Compare AirPods"
         ]
       },
-      {
-        "specialMenu": ["Compare AirPods"]
-      },
+
       {
         "Shop AirPods": [
           "Shop AirPods",
@@ -253,7 +252,8 @@
           "Siri"
         ]
       }
-    ]
+    ],
+    "specialMenu": true
   },
   {
     "id": 8,
@@ -268,9 +268,6 @@
           "TV & Home 13",
           "TV & Home SE"
         ]
-      },
-      {
-        "specialMenu": []
       },
       {
         "Shop TV & Home": [
@@ -293,7 +290,8 @@
           "Siri"
         ]
       }
-    ]
+    ],
+    "specialMenu": false
   },
   {
     "id": 9,
@@ -313,13 +311,12 @@
           "App Store"
         ]
       },
-      {
-        "specialMenu": []
-      },
+
       {
         "Support": ["Apple TV+ Support", "Apple Music Support"]
       }
-    ]
+    ],
+    "specialMenu": false
   },
   {
     "id": 10,
@@ -337,13 +334,12 @@
           "TV & Home"
         ]
       },
-      {
-        "specialMenu": []
-      },
+
       {
         "Explore Accessories": ["Made By Apple", "Beats By Dr. Dre", "Air Tag"]
       }
-    ]
+    ],
+    "specialMenu": false
   },
   {
     "id": 11,
@@ -358,12 +354,11 @@
           "Apple Vision Pro",
           "AirPods",
           "Music",
-          "TV"
+          "TV",
+          "Explore Support"
         ]
       },
-      {
-        "specialMenu": ["Explore Support"]
-      },
+
       {
         "Get Help": ["Community", "Check Coverage", "Repair", "Contact Us"]
       },
@@ -376,6 +371,7 @@
           "Accessibility"
         ]
       }
-    ]
+    ],
+    "specialMenu": true
   }
 ]
