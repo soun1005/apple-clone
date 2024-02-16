@@ -17,6 +17,9 @@
   --paddlenav-arrow-color: rgb(110, 110, 115);
   --paddlenav-arrow-color-hover: rgb(0 0 0/64%);
   --paddlenav-background-hover: rgb(0 0 0/4.48%);
+
+  /* font size */
+  --ribbon-text: clamp(0.75rem, 0.5938rem + 0.8333vw, 1.0625rem);
 }
 
 /************************ common values ***********************/

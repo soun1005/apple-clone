@@ -1,6 +1,7 @@
 import { Roboto } from 'next/font/google';
 import './globals.css';
 import Globalnav from '../../components/globalnav';
+import RibbonContent from '../../components/ribbonContent';
 import 'normalize.css/normalize.css';
 
 const roboto = Roboto({
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={roboto.className}>
         <Globalnav />
+        <RibbonContent />
         {children}
       </body>
     </html>
