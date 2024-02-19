@@ -16,11 +16,7 @@ const Globalnav = () => {
   };
 
   return (
-    <nav
-      className={styles.container}
-      // onMouseLeave={() => setOpenDropdown(false)}
-      onMouseLeave={handleOnMouseLeave}
-    >
+    <nav className={styles.container} onMouseLeave={handleOnMouseLeave}>
       <div className={styles.content}>
         {/* go back icon */}
         <div className={styles.goBack}></div>

@@ -1,24 +1,22 @@
 .container {
   display: inherit;
-  background-color: aqua;
+  background-color: rgb(103, 248, 51);
   width: 100%;
+  height: 100vh;
+}
+
+.linkContainer {
+  display: inherit;
   height: 100%;
 }
 
 .linkWrap {
-  display: inherit;
-  background-color: deepskyblue;
-  height: 100%;
-}
-
-.ul {
   background-color: rgb(139, 244, 232);
   display: block;
   height: 100%;
 }
 
 .li {
-  background-color: chartreuse;
   height: 100%;
   width: 100%;
 }
@@ -36,37 +34,51 @@
 
 /* submenu displayed */
 .submenu {
-  background-color: rgb(204, 204, 204);
   position: absolute;
-  height: 100%;
-  top: 100%;
-  padding-bottom: 2rem;
+  top: 44px;
+  /* padding: 2rem 0; */
   width: 100%;
   left: 0;
   right: 0;
   bottom: 0;
-  animation: growDown 300ms ease-in-out forwards;
-  transform-origin: top center;
-  /* overflow-y: hidden; */
+  transform-origin: top;
+  overflow-y: hidden;
   opacity: 1;
+  display: flex;
+  height: calc(100vh - 44px);
+  /* height: fit-content; */
+  z-index: 99;
+  flex-direction: column;
+}
+
+.contentWrap {
+  background-color: aqua;
+  padding: 2rem 0;
+}
+
+.submenuItemWrap {
+  display: flex;
+  max-width: 1024px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
 /* menu items displayed */
 .submenuItems {
-  background-color: pink;
-  /* position: absolute; */
+  background-color: rgb(250, 23, 61);
   width: 100%;
   overflow-y: hidden;
   opacity: 1;
   transition: 300ms;
-  /* height: fit-content; */
 }
+
 /* submenu hidden */
 .hidden {
-  transition: 500ms;
+  transition: 700ms;
   width: 100%;
   height: 0;
-  top: 100%;
+  top: 44px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -76,9 +88,15 @@
 
 /* menu items hidden */
 .submenuItemsHidden {
-  transition: 200ms;
+  transition: 300ms;
   width: 100%;
   opacity: 0;
+}
+
+.blurryBg {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
 }
 
 @keyframes growDown {
